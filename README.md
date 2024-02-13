@@ -47,7 +47,7 @@ La recomendación es que debe tener los siguientes headers:
 
 Desarrolle un programa que cuente con un menú que permita las siguientes operaciones:
 
-**Antes de comenzar debe completar la estructura TextFileHandler**, esta estructura se encuentra dentro del archivo [TextFilehandler.h](./libs/TextFileHandler.h)
+**Antes de comenzar debe completar la estructura TextFileHandler**, esta estructura se encuentra dentro del archivo [TextFilehandler.h](https://github.com/clase-programacion-avanzada/CPP-Workshop-3/blob/main/libs/TextFileHandler.h)
 
 1. **Leer archivo de texto:** debe leer el archivo de texto `resultados.txt` y almacenar la información en una lista de partidos creando y usando la estructura TextFileHandler(`List<Match>`).(2.0)<br />
     En este punto debe incluir una función que lea el archivo de texto y que retorne una lista de tipo `List<Match>`.<br /><br />
