@@ -9,7 +9,7 @@ La recomendación es que debe tener los siguientes headers:
 
 - `List.h`: debe tener la estructura `List` y funciones que permitan agregar, eliminar, obtener, verificar si contiene un elemento, copiar y limpiar la lista.
 
-- `TextFileHandler.h`: debe tener la estructura `TextFileHandler` y funciones que permitan leer (retornando una estructura de tipo `List<string>` con las líneas del archivo) y escribir en un archivo de texto (recibiendo como parámetro una `List<string>` y un modo de operación [ios::out o ios::app]). Además, hay que tener un método que permita escribir una sola línea, recibiendo el modo como segundo parámetro en la función.
+- `TextFileHandler.h`: debe tener la estructura `TextFileHandler` y funciones que permitan leer (retornando una estructura de tipo `List<string>` con las líneas del archivo) y escribir en un archivo de texto (recibiendo como parámetro una `List<string>` y un modo de operación [ios::out o ios::app]). Además, hay que tener un método que permita agregar una sola línea de texto al archivo, recibiendo el modo de lectura o escritura como segundo parámetro en la función.
 
 - `Match.h`: debe tener la estructura `Match`. Esta estructura debe tener los siguientes atributos:
     - `string localTeam`
@@ -46,6 +46,8 @@ La recomendación es que debe tener los siguientes headers:
     - `int points`
 
 Desarrolle un programa que cuente con un menú que permita las siguientes operaciones:
+
+**Antes de comenzar debe completar la estructura TextFileHandler**, esta estructura se encuentra dentro del archivo [TextFilehandler.h](./libs/TextFileHandler.h)
 
 1. **Leer archivo de texto:** debe leer el archivo de texto `resultados.txt` y almacenar la información en una lista de partidos creando y usando la estructura TextFileHandler(`List<Match>`).(2.0)<br />
     En este punto debe incluir una función que lea el archivo de texto y que retorne una lista de tipo `List<Match>`.<br /><br />
