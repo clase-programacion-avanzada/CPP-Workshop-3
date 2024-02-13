@@ -13,7 +13,7 @@
 *.pdf
 
 libs/Match.h
-libs/TextFileHandler.h
+#libs/TextFileHandler.h
 
 libs/ListComplete.h
 
