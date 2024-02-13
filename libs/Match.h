@@ -16,16 +16,8 @@ struct Match {
 
     int getPointsForLocalTeam() {
 
-        if(scoreLocalTeam > scoreVisitingTeam){
-            return 5;
-        }
-        if(scoreLocalTeam < scoreVisitingTeam){
-            return 0;
-        }
-        if(scoreLocalTeam == 0 && scoreVisitingTeam == 0){
-            return 1;
-        }
-        return 3;
+       
+        return 0;
     }
 
     int getPointsForVisitingTeam() {
@@ -43,7 +35,7 @@ Match getMatchFromLine(string line, char delimiter) {
 
 string getLineFromMatch(Match match, char delimiter) {
     string line;
-    
+
     return line;
 }
 
