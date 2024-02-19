@@ -47,7 +47,7 @@ Desarrolle un programa que cuente con un menú que permita las siguientes operac
 
 1. **Leer archivo de texto:** debe leer el archivo de texto `resultados.txt` y almacenar la información en una lista de partidos (`List<Match>`), creando y usando la estructura TextFileHandler.(2.0)<br />
     En este punto debe incluir una función que lea el archivo de texto y que retorne una lista de tipo `List<Match>`.<br /><br />
-    En cada posición de este arreglo debe ir la información de cada uno de los matches existentes en el archivo.<br /><br /> 
+    En cada posición de esta lista debe ir la información de cada uno de los matches existentes en el archivo.<br /><br /> 
 
 2. **Mostrar lista de partidos:** debe mostrar la lista de partidos almacenada en el punto anterior. (0.5)<br />
 3. **Agregar partido:** debe agregar un partido a la lista de partidos y actualizar el archivo de texto. (1.0)<br />
