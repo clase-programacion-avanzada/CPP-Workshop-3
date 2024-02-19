@@ -41,28 +41,17 @@ La recomendación es que debe tener los siguientes headers:
     ```cpp
       "Equipo1;2;Equipo2;1"
     ```
-- `MatchPoint.h`: debe tener la estructura `MatchPoint`. Esta estructura debe tener los siguientes atributos:
-    - `string teamName`
-    - `int points`
-
 Desarrolle un programa que cuente con un menú que permita las siguientes operaciones:
 
 **Antes de comenzar debe completar la estructura TextFileHandler**, esta estructura se encuentra dentro del archivo [TextFilehandler.h](https://github.com/clase-programacion-avanzada/CPP-Workshop-3/blob/main/libs/TextFileHandler.h)
 
-1. **Leer archivo de texto:** debe leer el archivo de texto `resultados.txt` y almacenar la información en una lista de partidos creando y usando la estructura TextFileHandler(`List<Match>`).(2.0)<br />
+1. **Leer archivo de texto:** debe leer el archivo de texto `resultados.txt` y almacenar la información en una lista de partidos (`List<Match>`), creando y usando la estructura TextFileHandler.(2.0)<br />
     En este punto debe incluir una función que lea el archivo de texto y que retorne una lista de tipo `List<Match>`.<br /><br />
-    En cada posición de este arreglo debe ir la información de cada uno de los matches existentes en el archivo.<br /><br />
-    Los valores iniciales para el puntaje de los equipos se calculan de la siguiente manera:  
-    
-        - El equipo que tenga más anotaciones obtendrá 5 puntos y el otro equipo 0.
-        
-        - Si hay empate distinto de 0-0, se le asignan 3 puntos a cada equipo.
-        
-        - Si hay empate 0-0, se le asigna 1 punto a cada equipo. 
+    En cada posición de este arreglo debe ir la información de cada uno de los matches existentes en el archivo.<br /><br /> 
 
 2. **Mostrar lista de partidos:** debe mostrar la lista de partidos almacenada en el punto anterior. (0.5)<br />
 3. **Agregar partido:** debe agregar un partido a la lista de partidos y actualizar el archivo de texto. (1.0)<br />
-    En este punto debe incluir la función que recibe como parámetro un match y un caracter que va a ser el delimitador:<br /><br />
+    En este punto debe [incluir la función que recibe como parámetro un match y un caracter que va a ser el delimitador](https://github.com/clase-programacion-avanzada/CPP-Workshop-3/blob/main/libs/Match.h#L36):<br /><br />
 
     ```cpp
     string getLineFromMatch(Match match, char delimiter);
@@ -131,14 +120,33 @@ Desarrolle un programa que cuente con un menú que permita las siguientes operac
      - uno más con el nombre 'reporte_empates' que contendrá los empates distintos del marcador 0-0.
      - finalmente, en el archivo 'reporte_empates_sin_marcador' los empates donde el marcador fue 0-0 (1.5)<br />
 
-    En este reporte el formato es distinto, pues cada línea no estará separada por el delimitador **';'** sino el espacio **' '**
+    Tenga en cuenta que para los partidos se decidió que:<br /><br />
+    
+     - El equipo que tenga más anotaciones obtendrá 5 puntos y el otro equipo 0. 
+     - Si hay empate distinto de 0-0, se le asignan 3 puntos a cada equipo. 
+    - Si hay empate 0-0, se le asigna 1 punto a cada equipo.<br /><br />
+    
+    esto le puede servir para determinar si quien ganó fue el equipo visitante o el equipo local.<br /><br />
+
+    Tenga en cuenta que en este reporte el formato es distinto, pues cada línea no estará separada por el delimitador **';'** sino el espacio **' '**
     Además, es necesario que al inicio del archivo se indique claramente qué tipo de reporte es:<br /><br />
-    por ejemplo: "Reporte de locales ganadores"<br /><br />
-    Finalmente, debe escribir en el archivo lo siguiente:<br />
+    por ejemplo: "**Reporte de partidos ganados por el equipo local**"<br /><br />
+    Luego, debe incluir solo los partidos que cumplen con esa condición:
+    ```
+      Economistas Creativos 3 Ingenieros Financieros 2
+      Financieros Ingeniosos 2 Economistas Creativos 0
+      Cálculos Exactos 2 Analistas Numéricos 1
+      Financieros Ingeniosos 3 Cálculos Exactos 1
+      Economistas Creativos 1 Analistas Numéricos 0
+      Financieros Ingeniosos 2 Economistas Creativos 1
+      Financieros Ingeniosos 3 Papagayos de la Comuna 0
+      ``` 
+    <br /><br />
+    Finalmente, debe escribir en el archivo un resumen:<br />
       ```
-      Cantidad de <partidos locales ganados | partidos visitantes ganados>: 5
+      Cantidad de <partidos locales ganados | partidos visitantes ganados>: 7
       Total de partidos: 20
-      Porcentaje de <partidos locales ganados | partidos visitantes ganados>: 25%
+      Porcentaje de <partidos locales ganados | partidos visitantes ganados>: 35%
       ```
-    En el taller tiene un ejemplo de cada uno de los archivos.(1.0)
+    [En el taller tiene un ejemplo de cada uno de los archivos](https://github.com/clase-programacion-avanzada/CPP-Workshop-3/blob/main/reporte_empates.txt).(1.0)
     
