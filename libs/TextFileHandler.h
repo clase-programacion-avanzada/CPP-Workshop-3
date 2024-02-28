@@ -22,24 +22,6 @@ struct TextFileHandler {
         
         fstream file;
 
-        //We open the file.
-        //We use the open() function from the file stream object.
-        file.open(fileName, ios::in);//We open the file in read mode.
-        
-        //We check if the file was opened correctly.
-        if (file.fail()) {
-            return lines;
-        }
-
-        string line;
-        //We use the getline() function to read the file line by line.
-        //istream& getline (istream&  is, string& str, char delim);
-        // we can use it inside a while loop because it returns true if the line was read correctly.
-        
-        while (getline(file, line)) {
-            lines.add(line);
-            
-        }
 
         file.close();
 
@@ -51,32 +33,7 @@ struct TextFileHandler {
 
         fstream file;
 
-        
-        //We can open a file using the open() function.
-        //The first parameter is the name of the file, the second parameter is the mode.
-        //The mode can be either ios::in (read only) or ios::out (write only) .
-        //The third parameter is the mode of the file.
-        file.open(fileName, ios::out);//We open the file in write mode.
-        //The open() function returns a boolean value.
-        //If the file is opened successfully, the function returns true.
-        //If the file is not opened, the function returns false.
-        //We need to make sure that this stream is succesfully open before we can write to it.
-        
-        if(file.fail()){
-            return false;
-        }
-        
-        //The process of writing to a file is done using the write() function. 
-        //The approach is very similar of writing into a console. 
-        //in the console, we use the << operator (i.e cout << "Hello World!"),
-        //with files, we replace cout with file.
-        for (int i = 0; i < lines.size; i++) {
-            
-            if(i != 0) {
-                file<<endl;
-            }
-            file << lines.get(i);
-        }
+      
         //We must be sure that we close the file when we are done writing to it.
         file.close();
 
