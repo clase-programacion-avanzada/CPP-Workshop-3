@@ -1,5 +1,6 @@
 # Taller 3 - Manejo de archivos de texto
-## Desarrollo del Programa en C++
+
+## Enunciado
 
 En este taller es obligatorio el uso de estructuras y funciones. 
 
@@ -43,7 +44,7 @@ La recomendación es que debe tener los siguientes headers:
     ```
 Desarrolle un programa que cuente con un menú que permita las siguientes operaciones:
 
-**Antes de comenzar debe completar la estructura TextFileHandler**, esta estructura se encuentra dentro del archivo [TextFilehandler.h](https://github.com/clase-programacion-avanzada/CPP-Workshop-3/blob/main/libs/TextFileHandler.h)
+**Antes de comenzar debe completar la estructura TextFileHandler**, esta estructura se encuentra dentro del archivo [TextFilehandler.h](https://github.com/clase-programacion-avanzada/CPP-Workshop-3/blob/main/libs/TextFileHandler.h) y puede encontrar un ejemplo de cómo usar esta estructura en el [código de ejemplo](https://github.com/clase-programacion-avanzada/CPP-2_TEXT_FILES/blob/main/7_reading_text_files_movies.cpp#L45).
 
 1. **Leer archivo de texto:** debe leer el archivo de texto `resultados.txt` y almacenar la información en una lista de partidos (`List<Match>`), creando y usando la estructura TextFileHandler.(2.0)<br />
     En este punto debe incluir una función que lea el archivo de texto y que retorne una lista de tipo `List<Match>`.<br /><br />
@@ -51,7 +52,7 @@ Desarrolle un programa que cuente con un menú que permita las siguientes operac
 
 2. **Mostrar lista de partidos:** debe mostrar la lista de partidos almacenada en el punto anterior. (0.5)<br />
 3. **Agregar partido:** debe agregar un partido a la lista de partidos y actualizar el archivo de texto. (1.0)<br />
-    En este punto debe [incluir la función que recibe como parámetro un match y un caracter que va a ser el delimitador](https://github.com/clase-programacion-avanzada/CPP-Workshop-3/blob/main/libs/Match.h#L36):<br /><br />
+    En este punto puede [incluir la función que recibe como parámetro un match y un caracter que va a ser el delimitador](https://github.com/clase-programacion-avanzada/CPP-Workshop-3/blob/main/libs/Match.h#L37):<br /><br />
 
     ```cpp
     string getLineFromMatch(Match match, char delimiter);
@@ -86,7 +87,7 @@ Desarrolle un programa que cuente con un menú que permita las siguientes operac
     ```cpp
     "Equipo3;1;Equipo4;1"
     ```
-    Esta función debe ir dentro del archivo `Match.h`, pero no dentro de la estructura `Match`.<br /><br />
+    Si crea esta función, debe ir dentro del archivo `Match.h`, pero no dentro de la estructura `Match`.<br /><br />
     Use esta función a la hora de actualizar el archivo de texto.<br /><br />
     En este caso, el archivo de texto debe quedar de la siguiente manera:
     ```cpp
@@ -126,7 +127,7 @@ Desarrolle un programa que cuente con un menú que permita las siguientes operac
      - Si hay empate distinto de 0-0, se le asignan 3 puntos a cada equipo. 
     - Si hay empate 0-0, se le asigna 1 punto a cada equipo.<br /><br />
     
-    esto le puede servir para determinar si quien ganó fue el equipo visitante o el equipo local.<br /><br />
+    esto le puede servir para determinar si quien ganó fue el equipo visitante o el equipo local, pero no es obligatorio, ya que con el puntaje también es posible determinar el resultado del partido.<br /><br />
 
     Tenga en cuenta que en este reporte el formato es distinto, pues cada línea no estará separada por el delimitador **';'** sino el espacio **' '**
     Además, es necesario que al inicio del archivo se indique claramente qué tipo de reporte es:<br /><br />
@@ -150,3 +151,7 @@ Desarrolle un programa que cuente con un menú que permita las siguientes operac
       ```
     [En el taller tiene un ejemplo de cada uno de los archivos](https://github.com/clase-programacion-avanzada/CPP-Workshop-3/blob/main/reporte_empates.txt).(1.0)
     
+## Recursos en Línea
+- [C++ file handling for beginners! The easiest way to read/write into text files!](https://www.youtube.com/watch?v=EaHFhms_Shw) [Video]
+- [Stringstringstream in C++ and its Applications](https://www.geeksforgeeks.org/stringstream-c-applications/) [Artículo]
+- [Ejemplos](https://github.com/clase-programacion-avanzada/CPP-2_TEXT_FILES/tree/main) [Repositorio]
